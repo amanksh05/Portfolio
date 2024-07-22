@@ -1,0 +1,23 @@
+/* app/Home.module.css */
+.section {
+    opacity: 0;
+    transform: translateY(100vh); /* Initially hide the section below the viewport */
+    transition: transform 0.75s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.75s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move to the visible position */
+  }
+  
+  .section.exit {
+    opacity: 0;
+    transform: translateY(-100vh); /* Move out of view upwards */
+  }
+  /* Add additional styles for active links if needed */
+.active-link {
+    color: #FF6F61; /* Example active link color */
+    font-weight: bold;
+  }
+  
+  
