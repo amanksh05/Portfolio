@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 const Navigation = () => {
     const pathName = usePathname();
     return (
-        <div className='sticky top-0 z-50 flex flex-row justify-between items-center p-4 px-8 border-b border-zinc-800 '>
+        <div className='sticky top-0 z-50 flex flex-row justify-between items-center p-4 px-8 border-b border-zinc-800 bg-black '>
             <div>
                 Logo
             </div>
