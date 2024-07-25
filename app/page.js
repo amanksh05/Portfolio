@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 import styles from './Home.module.css';
 
 export default function Home() {
@@ -48,23 +49,30 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center">
       <section id="intro" className={`flex min-h-screen flex-col items-center justify-center ${styles.section}`}>
-        <div className="flex flex-row justify-center items-center  px-20 py-20 gap-10">
-          <div className="flex flex-col gap-3">
+        <div className="flex flex-row justify-center items-center px-20 py-20 gap-10">
+          <div className="flex flex-col gap-5">
             {/* Introduction content */}
-            <div>
-              <div className="font-aeonik tracking-wide text-2xl font-semibold">
+            <div className="flex flex-col gap-2">
+              <div className="font-aeonik tracking-wide text-4xl font-semibold">
                 Hi! I am Aman Kumar
               </div>
-              <div className="font-geist text-sm tracking-wider font-medium">
+              <div className="font-geist text-lg tracking-wider font-medium">
                 UX/UI DESIGNER | DEVELOPER
               </div>
             </div>
-            <div>
+            <div className="font-aeonik tracking-wider text-lg">
               Self taught UX/UI designer and developer by profession, pursuing B.tech CSE.
             </div>
           </div>
-          <div className="bg-slate-700 w-64 h-auto">
-            {/* image / avatar */}
+          <div className="relative w-64 h-64 overflow-hidden rounded-full border-2 border-gray-400">
+            {/* Image / avatar */}
+            <Image
+              src="/Ethnic.png"
+              alt="Avatar"
+              layout="fill"
+              objectFit="cover"
+              className="image-zoom"
+            />
           </div>
         </div>
       </section>
